@@ -1,0 +1,68 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+table, tr, td {
+	@apply border;
+}
+
+body {
+	@apply font-body;
+}
+
+@font-face {
+  font-family: 'VolteRounded';
+  src: url('./fonts/VolteRounded-Regular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/VolteRounded-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/VolteRounded-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/VolteRounded-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/VolteRounded-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/VolteRounded-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+@font-face {
+  font-family: 'VolteRounded';
+  font-weight: 300;
+  src: url('./fonts/VolteRounded-Light.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/VolteRounded-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/VolteRounded-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/VolteRounded-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/VolteRounded-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/VolteRounded-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'VolteRounded';
+  font-weight: 500;
+  src: url('./fonts/VolteRounded-Medium.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/VolteRounded-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/VolteRounded-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/VolteRounded-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/VolteRounded-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/VolteRounded-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'VolteRounded';
+  font-weight: 600;
+  src: url('./fonts/VolteRounded-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/VolteRounded-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/VolteRounded-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/VolteRounded-Semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/VolteRounded-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/VolteRounded-Semibold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'VolteRounded';
+  font-weight: 700;
+  src: url('./fonts/VolteRounded-Bold.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/VolteRounded-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/VolteRounded-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/VolteRounded-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/VolteRounded-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/VolteRounded-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

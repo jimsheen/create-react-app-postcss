@@ -1,0 +1,1402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Disabled 1`] = `
+<button
+  className="block rounded px-6 py-2 bg-gray-200 border text-gray-400"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+  value="Test"
+>
+  test
+</button>
+`;
+
+exports[`Storyshots Button Large 1`] = `
+<button
+  className="block rounded px-8 py-3 bg-red-primary hover:bg-red-hover text-white"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+  value="Test"
+>
+  test
+</button>
+`;
+
+exports[`Storyshots Button Primary 1`] = `
+<button
+  className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+  value="Test"
+>
+  test
+</button>
+`;
+
+exports[`Storyshots Button Secondary 1`] = `
+<button
+  className="block rounded px-6 py-2 hover:bg-gray-100 border"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+  value="Test"
+>
+  test
+</button>
+`;
+
+exports[`Storyshots Button Small 1`] = `
+<button
+  className="block rounded px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+  value="Test"
+>
+  test
+</button>
+`;
+
+exports[`Storyshots DropdownButton with props 1`] = `
+<div
+  className="relative inline-block"
+>
+  <button
+    className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      Actions
+    </span>
+  </button>
+  <div
+    className="rounded shadow-md absolute pin-t pin-l border bg-white min-w-full hidden"
+  >
+    <ul
+      className="list-reset"
+    >
+      <li>
+        <span
+          className="px-6 py-2 block text-black hover:bg-grey-light"
+          onClick={[Function]}
+        >
+          Action
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PaginatedTable with props 1`] = `
+Array [
+  <div
+    className="mx-auto"
+  >
+    <div
+      className="bg-white shadow-md rounded my-6"
+    >
+      <div />
+      <table
+        className="text-left w-full border-collapse table-auto"
+      >
+        <thead>
+          <tr>
+            <td>
+              <button
+                className="py-4 px-6 w-full h-full block text-left"
+                onClick={[Function]}
+                type="button"
+                value="first_name"
+              >
+                First Name
+              </button>
+            </td>
+            <td>
+              <button
+                className="py-4 px-6 w-full h-full block text-left"
+                onClick={[Function]}
+                type="button"
+                value="last_name"
+              >
+                Last Name
+              </button>
+            </td>
+            <td>
+              <button
+                className="py-4 px-6 w-full h-full block text-left"
+                onClick={[Function]}
+                type="button"
+                value="avatar"
+              >
+                Avatar
+              </button>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            className="hover:bg-gray-200 bg-gray-100"
+          >
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Dave
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Holt
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+            </td>
+          </tr>
+          <tr
+            className="hover:bg-gray-200"
+          >
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Charles
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Morris
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+            </td>
+          </tr>
+          <tr
+            className="hover:bg-gray-200 bg-gray-100"
+          >
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Tracey
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              Ramos
+            </td>
+            <td
+              className="py-4 px-6 border-b border-grey-light"
+            >
+              https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+  <div
+    className="flex justify-center align-center mb-4"
+  >
+    <div
+      className="flex justify-center align-center list-reset border border-grey-light rounded w-auto"
+      data-test="pagination"
+    >
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2 bg-red-primary text-white hover:bg-red-hover"
+        data-test="pagination-number-1"
+        onClick={[Function]}
+        value={1}
+      >
+        1
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-2"
+        onClick={[Function]}
+        value={2}
+      >
+        2
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-3"
+        onClick={[Function]}
+        value={3}
+      >
+        3
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-4"
+        onClick={[Function]}
+        value={4}
+      >
+        4
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-5"
+        onClick={[Function]}
+        value={5}
+      >
+        5
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-6"
+        onClick={[Function]}
+        value={6}
+      >
+        6
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-7"
+        onClick={[Function]}
+        value={7}
+      >
+        7
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-8"
+        onClick={[Function]}
+        value={8}
+      >
+        8
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-9"
+        onClick={[Function]}
+        value={9}
+      >
+        9
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary border-r border-grey-light px-3 py-2"
+        data-test="pagination-number-10"
+        onClick={[Function]}
+        value={10}
+      >
+        10
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary px-3 py-2 border-r"
+        data-test="next-btn"
+        onClick={[Function]}
+        value={2}
+      >
+        Next
+      </button>
+      <button
+        className="block hover:text-white hover:bg-red-primary px-3 py-2"
+        data-test="last-btn"
+        onClick={[Function]}
+        value={10}
+      >
+        Last
+      </button>
+    </div>
+  </div>,
+  <div
+    className="mb-4 text-center"
+  >
+    <span>
+      Page size
+    </span>
+    <div
+      className="inline-block relative"
+    >
+      <select
+        className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline ml-2"
+        onChange={[Function]}
+        value={10}
+      >
+        <option
+          defaultValue={10}
+          value={10}
+        >
+          10
+        </option>
+        <option
+          value={20}
+        >
+          20
+        </option>
+        <option
+          value={50}
+        >
+          50
+        </option>
+        <option
+          value={100}
+        >
+          100
+        </option>
+      </select>
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+      >
+        <svg
+          className="fill-current h-4 w-4"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots SortableTable isCheckable 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="flex flex-wrap w-1/2 justify-end items-center"
+        >
+          <span
+            data-test="selected-items-length"
+          >
+            0
+             selected
+          </span>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td
+            width="50"
+          >
+            <div
+              className="text-center"
+            >
+              <input
+                data-test="select-all-btn"
+                type="checkbox"
+              />
+            </div>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={4}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={4}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Eve
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Holt
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={5}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={5}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Charles
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Morris
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={6}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={6}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Tracey
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Ramos
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with multi actions 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="w-1/2 text-left"
+          data-test="multi-actions"
+        >
+          <div
+            className="relative inline-block"
+          >
+            <button
+              className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              <span>
+                Actions
+              </span>
+            </button>
+            <div
+              className="rounded shadow-md absolute pin-t pin-l border bg-white min-w-full hidden"
+            >
+              <ul
+                className="list-reset"
+              >
+                <li>
+                  <span
+                    className="px-6 py-2 block text-black hover:bg-grey-light"
+                    onClick={[Function]}
+                  >
+                    Action
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="flex flex-wrap w-1/2 justify-end items-center"
+        >
+          <span
+            data-test="selected-items-length"
+          >
+            8
+             selected
+          </span>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td
+            width="50"
+          >
+            <div
+              className="text-center"
+            >
+              <input
+                data-test="select-all-btn"
+                type="checkbox"
+              />
+            </div>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={4}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={4}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Eve
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Holt
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={5}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={5}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Charles
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Morris
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={6}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={6}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Tracey
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Ramos
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with props 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div />
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Eve
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Holt
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Charles
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Morris
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Tracey
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Ramos
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with search 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div />
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Eve
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Holt
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Charles
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Morris
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Tracey
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Ramos
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with search and checkable 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="flex flex-wrap w-1/2 justify-end items-center"
+        >
+          <span
+            data-test="selected-items-length"
+          >
+            0
+             selected
+          </span>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td
+            width="50"
+          >
+             
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            width="50"
+          >
+            <div
+              className="text-center"
+            >
+              <input
+                data-test="select-all-btn"
+                type="checkbox"
+              />
+            </div>
+          </td>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div
+              className="relative"
+            >
+              <input
+                className="w-full py-2 focus:outline-none focus:shadow-outline px-6"
+                data-test="search-field"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <button
+                className="inline-block absolute top-0 right-0 py-3 px-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="h-4 w-4 inline-block flex"
+                >
+                  <img
+                    className="h-full w-auto"
+                    src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjExMiAzMS4xMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjExMiAzMS4xMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBwb2ludHM9IjMxLjExMiwxLjQxNCAyOS42OTgsMCAxNS41NTYsMTQuMTQyIDEuNDE0LDAgMCwxLjQxNCAxNC4xNDIsMTUuNTU2IDAsMjkuNjk4IDEuNDE0LDMxLjExMiAxNS41NTYsMTYuOTcgICAyOS42OTgsMzEuMTEyIDMxLjExMiwyOS42OTggMTYuOTcsMTUuNTU2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                  />
+                </span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={4}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={4}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Eve
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Holt
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={5}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={5}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Charles
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Morris
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="text-center"
+            width="50"
+          >
+            <div
+              className="custom-checkbox"
+            >
+              <input
+                data-test="select-row-btn"
+                id={6}
+                onChange={[Function]}
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                htmlFor={6}
+                onClick={[Function]}
+              >
+                 
+              </label>
+            </div>
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Tracey
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            Ramos
+          </td>
+          <td
+            className="py-4 px-6 border-b border-grey-light"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable without props 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div />
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr />
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
