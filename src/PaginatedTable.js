@@ -14,6 +14,19 @@ const propTypes = {
   updateItems: PropTypes.func,
   items: PropTypes.array.isRequired,
   primaryKey: PropTypes.string.isRequired,
+  tableData: PropTypes.shape({
+    thLabels: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+      searchable: PropTypes.boolean,
+      editable: PropTypes.boolean,
+      link: PropTypes.shape({
+        root: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired,
+      }),
+      linkFunc: PropTypes.func,
+    }))
+  }).isRequired,
 };
 
 
@@ -24,7 +37,10 @@ export class PaginatedTable extends Component {
     this.state = {
       searchTerms: {},
       selectedItems: [],
+      editingItems: [],
+      editedItems: [],
       selectAllState: false,
+      editAllState: false,
     }
   }
 
@@ -47,10 +63,6 @@ export class PaginatedTable extends Component {
    */
   selectAll = (e) => {
     const { items, primaryKey = 'id' } = this.props;
-    // console.log(items);
-    // const selectAll = !this.state.selectAll
-    // const selectedItems = selectAll === false ? [] : items.map(o => o[primaryKey])
-    // this.setState({ selectedItems, selectAll })
     this.setState(({ selectAllState }) => ({
       selectedItems: selectAllState ? [] : items.map(item => item[primaryKey]),
       selectAllState: !selectAllState,
@@ -194,10 +206,7 @@ export class PaginatedTable extends Component {
    * @param {object} event - submission event
    */
   pageChange = (e) => {
-    // e.preventDefault()
     const { value } = e.target;
-    console.log(value);
-    // const { value } = event.target
     const { filterObj, updateItems } = this.props
     const { retrieveCount } = filterObj
     const startIndex = Number(value) === 1 ? 0 : (Number(value) - 1) * retrieveCount
@@ -212,9 +221,8 @@ export class PaginatedTable extends Component {
 
 
   sortItems = () => {
-    const { primaryKey, editingItems = [], items } = this.props;
-    const { selectedItems } = this.state;
-    console.log(selectedItems);
+    const { primaryKey, items } = this.props;
+    const { selectedItems, editingItems } = this.state;
     return items.map(item => {
       item.isChecked = selectedItems.indexOf(item[primaryKey]) !== -1
       item.isEditing = editingItems.indexOf(item[primaryKey]) !== -1
@@ -280,10 +288,93 @@ export class PaginatedTable extends Component {
     }
     this.setState(newState)
 
-    console.log(newState)
-
     return newState
-    //
+  }
+
+  /**
+   * handle updating selected items
+   * @param {object} event - click event
+   * @param {string} val - unique val of selected item
+   */
+  updateEditingItems = (e) => {
+
+    const { value } = e.target;
+    const { editingItems } = this.state;
+
+    let newItems = [...editingItems];
+
+    if (Array.isArray(value)) {
+      newItems = value
+    } else {
+      const currentIndex = editingItems.indexOf(Number(value))
+      if (currentIndex === -1) {
+        newItems.push(Number(value))
+      } else {
+        newItems.splice(currentIndex, 1)
+      }
+    }
+
+    this.setState({ editingItems: newItems })
+
+    return newItems
+  }
+
+  saveEditedItem = (e) => {
+    const { value } = e.target;
+    let { editingItems = [] } = this.state
+    this.updateEditingItems({ target: { value: value } });
+  }
+
+
+  toggleEditAll = (bool) => {
+    const {
+      primaryKey,
+      items,
+    } = this.props;
+    const editAllState = typeof bool === 'boolean' ? bool : !this.state.editAllState;
+    this.setState({ editAllState });
+    this.setState({
+      editingItems: editAllState ? items.map(item => item[primaryKey]) : []
+    })
+  }
+
+  saveAllItems = () => {
+
+    const { editedItems } = this.state;
+
+    this.setState(({ editAllState }) => ({
+      editingItems: [],
+      editAllState: false,
+    }));
+
+    // TODO - call props save function 
+  }
+
+  /**
+   * Handle state update of item input in a row
+   * @param {object} event - on change event
+   * @param {object} item - current item to be updated
+   * @param {string} label - label of the column to be updated
+   */
+  updateEditedItems = (e, item, label) => {
+    const { value } = e.target
+    const { editedItems, editingItems } = this.state
+    const { items, primaryKey } = this.props
+    const newItem = item
+    newItem[label] = value
+    const newItems = editedItems.length === 0 ? [newItem] : items.reduce((newEditArr, editItem) => {
+      let newObj = editItem
+      if (editItem[primaryKey] === item[primaryKey]) {
+        newObj[label] = value
+      }
+      newEditArr.push(newObj)
+      return newEditArr
+    }, []).filter(editItem => editingItems.indexOf(editItem[primaryKey]) !== -1)
+    this.setState({
+      ...this.state,
+      editedItems: newItems
+    })
+    return newItems;
   }
 
   render() {
@@ -299,17 +390,14 @@ export class PaginatedTable extends Component {
     const {
       selectedItems,
       selectAllState,
+      editAllState,
     } = this.state;
-
-    // console.log(this.state);
-    // console.log(this.props);
-
-    // console.log(this.sortItems(items, selectedItems, editingItems));
 
     const tableProps = {
       ...this.props,
       selectedItems,
       selectAllState,
+      editAllState,
       sortedItems: this.sortItems(),
       searchChange: this.searchChange,
       sortItemsEvt: this.sortItemsEvt,
@@ -318,9 +406,12 @@ export class PaginatedTable extends Component {
       clearSearch: this.clearSearch,
       selectAll: this.selectAll,
       updateSelected: this.updateSelected,
+      updateEditingItems: this.updateEditingItems,
+      saveEditedItem: this.saveEditedItem,
+      updateEditedItems: this.updateEditedItems,
+      saveAllItems: this.saveAllItems,
+      toggleEditAll: this.toggleEditAll,
     }
-
-    // console.log(tableProps)
 
     return (
       <React.Fragment>

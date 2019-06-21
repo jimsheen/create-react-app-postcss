@@ -15,7 +15,7 @@ let filterObj = {
   totalPages: 1,
 }
 
-const items = [{
+let items = [{
     "id": 4,
     "email": "eve.holt@reqres.in",
     "first_name": "Eve",
@@ -56,6 +56,11 @@ const initialProps = {
   sortedItems: items,
   searchTerms: {},
   isCheckable: false,
+  isEditable: false,
+  updateEditingItems: jest.fn(() => null),
+  saveAllItems: jest.fn(() => null),
+  toggleEditAll: jest.fn(() => null),
+  saveEditedItem: jest.fn(() => null),
 }
 
 const selectAllBtn = '[data-test="select-all-btn"]';
@@ -63,6 +68,13 @@ const selectRowBtn = '[data-test="select-row-btn"]';
 const searchField = '[data-test="search-field"]';
 const multiActions = '[data-test="multi-actions"]';
 const selectedItemsLength = '[data-test="selected-items-length"]';
+const editRowBtn = '[data-test="edit-row-btn"]';
+const saveEditBtn = '[data-test="save-edit-row-btn"]';
+const cancelEditBtn = '[data-test="cancel-edit-row-btn"]';
+const editColInput = '[data-test="edit-col-input"]';
+const editAllBtn = '[data-test="edit-all-btn"]';
+const saveAllBtn = '[data-test="save-all-btn"]';
+const cancelAllBtn = '[data-test="cancel-all-btn"]';
 
 let wrapper, defaultRender, render;
 
@@ -131,20 +143,86 @@ describe('Sortable Table Rendering', () => {
   })
 
   describe('multiActions', () => {
-  	it('should NOT render DropdownButton', () => {
-  		expect(defaultRender.find(multiActions).length).toBe(0);
-  	})
+    it('should NOT render DropdownButton', () => {
+      expect(defaultRender.find(multiActions).length).toBe(0);
+    })
 
-  	it('should render DropdownButton when multiActions are defined & isCheckable is true', () => {
-  		render = wrapper.render({
-  			...initialProps,
-  			isCheckable: true,
-  			multiActions: [{
-  				label: 'Test',
-  				action: () => null,
-  			}]
-  		})
-  		expect(render.find(multiActions).length).toBe(1);
-  	})
+    it('should render DropdownButton when multiActions are defined & isCheckable is true', () => {
+      render = wrapper.render({
+        ...initialProps,
+        isCheckable: true,
+        multiActions: [{
+          label: 'Test',
+          action: () => null,
+        }]
+      })
+      expect(render.find(multiActions).length).toBe(1);
+    })
+  })
+
+  describe('isEditable', () => {
+    beforeEach(() => {
+      render = wrapper.render({
+        ...initialProps,
+        tableData: {
+          ...tableData,
+          thLabels: tableData.thLabels.map(item => {
+            item.editable = true;
+            return item;
+          })
+        }
+      })
+    })
+
+    it('should NOT render edit buttons or edit all button', () => {
+      expect(defaultRender.find(editRowBtn).length).toBe(0);
+      expect(defaultRender.find(editAllBtn).length).toBe(0);
+    });
+
+    it('should render edit button and edit all button', () => {
+      expect(render.find(editRowBtn).length).toBe(items.length);
+      expect(render.find(editAllBtn).length).toBe(1);
+    })
+
+    it('should render save / cancel buttons when item.isEditing = true', () => {
+      render = wrapper.render({
+        ...initialProps,
+        isEditable: true,
+        sortedItems: [...items.map(item => {
+          item.isEditing = true;
+          return item;
+        })],
+        tableData: {
+          ...tableData,
+          thLabels: tableData.thLabels.map(item => {
+            item.editable = true;
+            return item;
+          })
+        }
+      })
+
+      expect(render.find(editRowBtn).length).toBe(0);
+      expect(render.find(cancelEditBtn).length).toBe(items.length);
+      expect(render.find(saveEditBtn).length).toBe(items.length);
+      expect(render.find(editColInput).length).toBe(items.length * 3);
+    })
+  })
+
+  describe('editAllState', () => {
+    it('should show editAllBtn and NOT show cancelAllBtn and saveAllBtn', () => {
+      expect(render.find(saveAllBtn).length).toBe(0);
+      expect(render.find(cancelAllBtn).length).toBe(0);
+    })
+
+    it('should show cancel and save all buttons', () => {
+      render = wrapper.render({
+        ...initialProps,
+        editAllState: true,
+      })
+
+      expect(render.find(cancelAllBtn).length).toBe(1);
+      expect(render.find(saveAllBtn).length).toBe(1);
+    })
+
   })
 })

@@ -8,7 +8,12 @@ const propTypes = {
   classes: PropTypes.string,
   disabled: PropTypes.bool,
   size: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.array,
+    PropTypes.number,
+  ]),
   active: PropTypes.bool,
 };
 
@@ -22,15 +27,16 @@ const Button = ({
   size = 'normal',
   disabled = false,
   active = false,
+  display = 'block',
   value,
   children,
 }) => {
 
-  let classNames = 'block rounded';
+  let classNames = display + ' rounded';
 
   switch (size) {
     case 'small':
-      classNames += ' px-4 py-1';
+      classNames += ' text-xs px-4 py-1';
       break;
     case 'normal':
       classNames += ' px-6 py-2';

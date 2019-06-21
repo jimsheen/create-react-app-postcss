@@ -306,7 +306,7 @@ describe('Methods', () => {
   describe('pageChange - handle page change event', () => {
 
     it('should return updated filterObj and call updateItems', () => {
-    	let e = { target: { value: 2 } }
+      let e = { target: { value: 2 } }
       const expectedObj = {
         ...filterObj,
         currentPage: 2,
@@ -320,12 +320,79 @@ describe('Methods', () => {
 
   describe('sortItems - sort items in array and apply isChecked or isEditing if in state', () => {
 
-  	it(`it should apply checked to item id ${items[0].id}`, () => {
-  		defaultRender.setState({
-  			selectedItems: [items[0].id],
-  		})
-  		instance = defaultRender.instance();
-  		expect(instance.sortItems()[0].isChecked).toEqual(true)
+    it(`it should apply checked to item id ${items[0].id}`, () => {
+      defaultRender.setState({
+        selectedItems: [items[0].id],
+      })
+      instance = defaultRender.instance();
+      expect(instance.sortItems()[0].isChecked).toEqual(true)
+    })
+  })
+
+  describe('updateEditingItems - toggle inline row editing', () => {
+    let e = {
+      target: {
+        value: 1,
+      }
+    }
+
+    it('should return updateItems array containing 1 & update editingItems state', () => {
+      expect(instance.updateEditingItems(e)).toEqual([1]);
+      expect(defaultRender.state().editingItems).toEqual([1]);
+    })
+
+    it('should return array with removed value & update editingItems state ', () => {
+      defaultRender.setState({ editingItems: [1, 2, 3, 4] })
+      expect(instance.updateEditingItems(e)).toEqual([2, 3, 4]);
+      expect(defaultRender.state().editingItems).toEqual([2, 3, 4]);
+    })
+
+    it('should return array if supplied an array value', () => {
+      defaultRender.setState({ editingItems: [1, 2, 3, 4] })
+      e.target.value = [4, 5, 6]
+      expect(instance.updateEditingItems(e)).toEqual([4, 5, 6]);
+    })
+  })
+
+  describe('#updateEditedItems - update or save row data in state', () => {
+  	let e = {
+  		target: {
+  			value: 'First Name',
+  		}
+  	}
+  	it('should return updated array and update editedItems in state', () => {
+  		const expectedObj = {
+  			...items[0],
+  			first_name: e.target.value
+  		}
+  		expect(instance.updateEditedItems(e, items[0], 'first_name')).toEqual([expectedObj])
+  		expect(defaultRender.state().editedItems).toEqual([expectedObj]);
+  	})
+
+  	it('should add to existing editedItems state', () => {
+  		defaultRender.setState({ 
+  			editedItems: [items[0]],
+  			editingItems: [items[0].id, items[1].id]
+  		});
+  		expect(instance.updateEditedItems(e, items[1], 'last_name')).toEqual([ items[0], {
+  			...items[1],
+  			last_name: e.target.value
+  		}])
   	})
   })
+
+  describe('#toggleEditAll - should toggle editAllState', () => {
+
+  	it('should change to true', () => {
+  		instance.toggleEditAll();
+  		expect(defaultRender.state().editAllState).toBe(true);
+  	});
+
+  	it('should change to false', () => {
+  		defaultRender.setState({ editAllState: true });
+  		instance.toggleEditAll();
+  		expect(defaultRender.state().editAllState).toBe(false);
+  	})
+  })
+
 });

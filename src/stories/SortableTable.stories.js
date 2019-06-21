@@ -55,6 +55,10 @@ const props = {
   clearSearch: action('clearSearch'),
   searchSubmit: action('searchSubmit'),
   searchChange: action('searchChange'),
+  updateEditingItems: action('updateEditingItems'),
+  saveAllItems: action('saveAllItems'),
+  toggleEditAll: action('toggleEditAll'),
+  saveEditedItem: action('saveEditedItem'),
   searchTerms: {},
   isCheckable: false,
   primaryKey: 'id',
@@ -98,6 +102,65 @@ const withMultiActions = {
   }]
 }
 
+const isEditable = {
+  ...props,
+  tableData: {
+    thLabels: [{
+      label: 'First Name',
+      value: 'first_name',
+    }, {
+      label: 'Last Name',
+      value: 'last_name',
+      editable: true,
+    }, {
+      label: 'Avatar',
+      value: 'avatar',
+    }],
+  },
+}
+
+const editingItems = {
+  ...isEditable,
+  tableData: {
+    thLabels: [{
+      label: 'First Name',
+      value: 'first_name',
+    }, {
+      label: 'Last Name',
+      value: 'last_name',
+      editable: true,
+    }, {
+      label: 'Avatar',
+      value: 'avatar',
+    }],
+  },
+  sortedItems: [{
+      "id": 4,
+      "email": "eve.holt@reqres.in",
+      "first_name": "Eve",
+      "last_name": "Holt",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+      isEditing: true,
+    },
+    {
+      "id": 5,
+      "email": "charles.morris@reqres.in",
+      "first_name": "Charles",
+      "last_name": "Morris",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+      isEditing: true,
+    },
+    {
+      "id": 6,
+      "email": "tracey.ramos@reqres.in",
+      "first_name": "Tracey",
+      "last_name": "Ramos",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+      isEditing: true,
+    }
+  ],
+}
+
 storiesOf('SortableTable', module)
   .add('without props', () => <SortableTable />)
   .add('with props', () => <SortableTable { ...props } />)
@@ -105,3 +168,6 @@ storiesOf('SortableTable', module)
   .add('with search', () => <SortableTable { ...withSearch } />)
   .add('with search and checkable', () => <SortableTable { ...checkedAndSearchable } />)
   .add('with multi actions', () => <SortableTable { ...withMultiActions } />)
+  .add('with row actions isEditable', () => <SortableTable { ...isEditable } />)
+  .add('with row actions + isEditing', () => <SortableTable { ...editingItems } />)
+  .add('with editAllState true', () => <SortableTable { ...editingItems } editAllState={true} />)

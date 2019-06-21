@@ -50,7 +50,7 @@ exports[`Storyshots Button Secondary 1`] = `
 
 exports[`Storyshots Button Small 1`] = `
 <button
-  className="block rounded px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+  className="block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -144,17 +144,17 @@ Array [
             className="hover:bg-gray-200 bg-gray-100"
           >
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Dave
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Holt
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
             </td>
@@ -163,17 +163,17 @@ Array [
             className="hover:bg-gray-200"
           >
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Charles
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Morris
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
             </td>
@@ -182,17 +182,17 @@ Array [
             className="hover:bg-gray-200 bg-gray-100"
           >
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Tracey
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               Ramos
             </td>
             <td
-              className="py-4 px-6 border-b border-grey-light"
+              className="border-b border-grey-light py-4 px-6"
             >
               https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
             </td>
@@ -372,7 +372,7 @@ exports[`Storyshots SortableTable isCheckable 1`] = `
         className="flex pb-3 justify-end"
       >
         <div
-          className="flex flex-wrap w-1/2 justify-end items-center"
+          className="flex flex-wrap w-1/2 items-center"
         >
           <span
             data-test="selected-items-length"
@@ -381,6 +381,9 @@ exports[`Storyshots SortableTable isCheckable 1`] = `
              selected
           </span>
         </div>
+        <div
+          className="w-1/2 text-right flex justify-end"
+        />
       </div>
     </div>
     <table
@@ -456,17 +459,17 @@ exports[`Storyshots SortableTable isCheckable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Eve
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Holt
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
           </td>
@@ -497,17 +500,17 @@ exports[`Storyshots SortableTable isCheckable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Charles
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Morris
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
           </td>
@@ -538,19 +541,249 @@ exports[`Storyshots SortableTable isCheckable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Tracey
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Ramos
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with editAllState true 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="w-1/2 text-right flex justify-end"
+        >
+          <button
+            className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white mr-2"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Save All
+          </button>
+          <button
+            className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+          <td>
+             
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Eve
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Holt"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={4}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={4}
+              >
+                Cancel
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Charles
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Morris"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={5}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={5}
+              >
+                Cancel
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Tracey
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Ramos"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={6}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={6}
+              >
+                Cancel
+              </button>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -571,48 +804,51 @@ exports[`Storyshots SortableTable with multi actions 1`] = `
         className="flex pb-3 justify-end"
       >
         <div
-          className="w-1/2 text-left"
-          data-test="multi-actions"
-        >
-          <div
-            className="relative inline-block"
-          >
-            <button
-              className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Actions
-              </span>
-            </button>
-            <div
-              className="rounded shadow-md absolute pin-t pin-l border bg-white min-w-full hidden"
-            >
-              <ul
-                className="list-reset"
-              >
-                <li>
-                  <span
-                    className="px-6 py-2 block text-black hover:bg-grey-light"
-                    onClick={[Function]}
-                  >
-                    Action
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div
-          className="flex flex-wrap w-1/2 justify-end items-center"
+          className="flex flex-wrap w-1/2 items-center"
         >
           <span
             data-test="selected-items-length"
           >
             8
              selected
+          </span>
+        </div>
+        <div
+          className="w-1/2 text-right flex justify-end"
+        >
+          <span
+            className="mr-2"
+          >
+            <div
+              className="relative inline-block"
+            >
+              <button
+                className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Actions
+                </span>
+              </button>
+              <div
+                className="rounded shadow-md absolute pin-t pin-l border bg-white min-w-full hidden"
+              >
+                <ul
+                  className="list-reset"
+                >
+                  <li>
+                    <span
+                      className="px-6 py-2 block text-black hover:bg-grey-light"
+                      onClick={[Function]}
+                    >
+                      Action
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </span>
         </div>
       </div>
@@ -690,17 +926,17 @@ exports[`Storyshots SortableTable with multi actions 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Eve
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Holt
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
           </td>
@@ -731,17 +967,17 @@ exports[`Storyshots SortableTable with multi actions 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Charles
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Morris
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
           </td>
@@ -772,17 +1008,17 @@ exports[`Storyshots SortableTable with multi actions 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Tracey
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Ramos
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
           </td>
@@ -840,17 +1076,17 @@ exports[`Storyshots SortableTable with props 1`] = `
           className="hover:bg-gray-200 bg-gray-100"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Eve
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Holt
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
           </td>
@@ -859,17 +1095,17 @@ exports[`Storyshots SortableTable with props 1`] = `
           className="hover:bg-gray-200"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Charles
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Morris
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
           </td>
@@ -878,19 +1114,409 @@ exports[`Storyshots SortableTable with props 1`] = `
           className="hover:bg-gray-200 bg-gray-100"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Tracey
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Ramos
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with row actions + isEditing 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="w-1/2 text-right flex justify-end"
+        >
+          <button
+            className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Edit All
+          </button>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+          <td>
+             
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Eve
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Holt"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={4}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={4}
+              >
+                Cancel
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Charles
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Morris"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={5}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={5}
+              >
+                Cancel
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Tracey
+          </td>
+          <td
+            className="border-b border-grey-light"
+          >
+            <input
+              className="py-4 px-6 w-full"
+              data-test="edit-col-input"
+              onChange={[Function]}
+              placeholder="Ramos"
+              type="text"
+            />
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <div>
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={6}
+              >
+                Save
+              </button>
+               
+              <button
+                className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                value={6}
+              >
+                Cancel
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SortableTable with row actions isEditable 1`] = `
+<div
+  className="mx-auto"
+>
+  <div
+    className="bg-white shadow-md rounded my-6"
+  >
+    <div>
+      <div
+        className="flex pb-3 justify-end"
+      >
+        <div
+          className="w-1/2 text-right flex justify-end"
+        >
+          <button
+            className="block rounded px-6 py-2 bg-red-primary hover:bg-red-hover text-white"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Edit All
+          </button>
+        </div>
+      </div>
+    </div>
+    <table
+      className="text-left w-full border-collapse table-auto"
+    >
+      <thead>
+        <tr>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="first_name"
+            >
+              First Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="last_name"
+            >
+              Last Name
+            </button>
+          </td>
+          <td>
+            <button
+              className="py-4 px-6 w-full h-full block text-left"
+              type="button"
+              value="avatar"
+            >
+              Avatar
+            </button>
+          </td>
+          <td>
+             
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Eve
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Holt
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <button
+              className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              value={4}
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Charles
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Morris
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <button
+              className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              value={5}
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr
+          className="hover:bg-gray-200 bg-gray-100"
+        >
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Tracey
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            Ramos
+          </td>
+          <td
+            className="border-b border-grey-light py-4 px-6"
+          >
+            https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
+          </td>
+          <td
+            className="text-center"
+            width="150"
+          >
+            <button
+              className="inline-block rounded text-xs px-4 py-1 bg-red-primary hover:bg-red-hover text-white"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              value={6}
+            >
+              Edit
+            </button>
           </td>
         </tr>
       </tbody>
@@ -1032,17 +1658,17 @@ exports[`Storyshots SortableTable with search 1`] = `
           className="hover:bg-gray-200 bg-gray-100"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Eve
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Holt
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
           </td>
@@ -1051,17 +1677,17 @@ exports[`Storyshots SortableTable with search 1`] = `
           className="hover:bg-gray-200"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Charles
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Morris
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
           </td>
@@ -1070,17 +1696,17 @@ exports[`Storyshots SortableTable with search 1`] = `
           className="hover:bg-gray-200 bg-gray-100"
         >
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Tracey
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Ramos
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
           </td>
@@ -1103,7 +1729,7 @@ exports[`Storyshots SortableTable with search and checkable 1`] = `
         className="flex pb-3 justify-end"
       >
         <div
-          className="flex flex-wrap w-1/2 justify-end items-center"
+          className="flex flex-wrap w-1/2 items-center"
         >
           <span
             data-test="selected-items-length"
@@ -1112,6 +1738,9 @@ exports[`Storyshots SortableTable with search and checkable 1`] = `
              selected
           </span>
         </div>
+        <div
+          className="w-1/2 text-right flex justify-end"
+        />
       </div>
     </div>
     <table
@@ -1278,17 +1907,17 @@ exports[`Storyshots SortableTable with search and checkable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Eve
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Holt
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg
           </td>
@@ -1319,17 +1948,17 @@ exports[`Storyshots SortableTable with search and checkable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Charles
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Morris
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg
           </td>
@@ -1360,17 +1989,17 @@ exports[`Storyshots SortableTable with search and checkable 1`] = `
             </div>
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Tracey
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             Ramos
           </td>
           <td
-            className="py-4 px-6 border-b border-grey-light"
+            className="border-b border-grey-light py-4 px-6"
           >
             https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg
           </td>

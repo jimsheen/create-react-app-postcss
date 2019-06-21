@@ -17,7 +17,6 @@ export class DropdownButton extends Component {
     actions: PropTypes.array.isRequired,
     buttonName: PropTypes.string,
     disabled: PropTypes.bool,
-    // align: PropTypes.string,
   }
 
   static defaultProps = {
@@ -47,7 +46,6 @@ export class DropdownButton extends Component {
    * @param {boolean} bool - true/false
    */
   toggleDropdown = () => {
-    // this.setState({ isOpen: typeof bool === 'boolean' ? bool : !this.state.isOpen });
     this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
   }
 
@@ -70,8 +68,6 @@ export class DropdownButton extends Component {
       actions,
       disabled,
     } = this.props;
-
-    console.log(disabled);
 
     return (
       <div className="relative inline-block">
@@ -97,51 +93,6 @@ export class DropdownButton extends Component {
       </div>
     )
   }
-  //   const dropdownClass = this.state.isOpen ? 'dropdownBtn dropdownBtn--open' : 'dropdownBtn';
-  //   const { roleName } = this.props;
-  //   // const { align } = this.props;
-  //   // const dropdownContentClass = align === 'left' ? 'dropdownBtn__content dropdownBtn__content--left' : 'dropdownBtn__content';
-  //   const actionBtn = (action, roleName) => {
-      // const button = <span 
-      //   className='dropdownBtn__action' 
-      //   onClick={() => this.actionClick(action.func)}
-      //   key={action.label}>
-      //     {action.label}
-      // </span>
-  //     if (typeof(action.roleRestricted) !== 'undefined') {
-  //       if (action.roleRestricted.indexOf(roleName) !== -1) {
-  //         return button;
-  //       }
-  //       return null;
-  //     }
-  //     return button;
-  //   }
-  //   return (
-  //     <div className={dropdownClass}
-  //         onClick={() => this.toggleDropdown()}>
-  //         <div>
-  //          <i className="icon-more-button"></i>
-  //         </div>
-  //       <div>
-  //         {this.props.actions.map(action =>
-  //           actionBtn(action, roleName)
-  //         )}
-  //       </div>
-  //     </div>
-  //   )
-  // }
 }
 
 export default DropdownButton;
-
-// /**
-// * @param {object} state - parse state
-// * @return {object} - map state to props
-// */
-// const mapStateToProps = state => {
-//   return {
-//     roleName: state.login.loggedUser.role_key.role_name,
-//   }
-// }
-
-// export default connect(mapStateToProps)(DropdownButton);

@@ -91,6 +91,7 @@ class Page extends Component {
         label: 'Last Name',
         value: 'last_name',
         searchable: true,
+        editable: false,
       }]
     }
   }
@@ -170,19 +171,31 @@ class Page extends Component {
       items,
       filterObj,
       updateItems: this.updateItems,
-      tableData: this.tableData,
+      tableData: {
+        thLabels: [{
+          label: 'First Name',
+          value: 'first_name',
+          searchable: true,
+          editable: true,
+        }, {
+          label: 'Last Name',
+          value: 'last_name',
+          searchable: true,
+          // editable: true,
+        }]
+      },
       isCheckable: true,
       primaryKey: 'id',
       multiActions: [{
-      	label: 'Action',
-      	action: (obj) => console.log(obj),
+        label: 'Action',
+        action: (obj) => console.log(obj),
       }]
     }
 
     return (
       <div>
-  			<PaginatedTable { ...sortableTableProps } />
-  		</div>
+        <PaginatedTable { ...sortableTableProps } />
+      </div>
     )
   }
 }

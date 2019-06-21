@@ -5,6 +5,7 @@ import { isEmpty } from 'underscore';
 // import PaginatedTable from './PaginatedTable';
 import CrossIcon from './cross';
 import DropdownButton from './DropdownButton';
+import Button from './Button';
 
 
 /**
@@ -31,6 +32,7 @@ const propTypes = {
   }).isRequired),
   selectAll: PropTypes.func,
   selectAllState: PropTypes.bool,
+  editAllState: PropTypes.bool,
   selectedItemsLength: PropTypes.number,
   tableData: PropTypes.shape({
     thLabels: PropTypes.arrayOf(PropTypes.shape({
@@ -51,9 +53,15 @@ const propTypes = {
   fullTable: PropTypes.bool,
   noItemsError: PropTypes.string,
   initialMessage: PropTypes.string,
+  isEditable: PropTypes.bool,
+  saveAllItems: PropTypes.func,
 }
 
-const tdClass = 'py-4 px-6 border-b border-grey-light';
+const tdBaseClass = 'border-b border-grey-light';
+const tdPadding = 'py-4 px-6';
+const tdClass = `${tdBaseClass} ${tdPadding}`
+const tdClassEditing = tdBaseClass;
+const editInputClass = `${tdPadding} w-full`;
 const trClass = 'hover:bg-gray-200';
 const sortBtnClass = 'py-4 px-6 w-full h-full block text-left';
 
@@ -67,6 +75,7 @@ export class SortableTable extends Component {
 
   static defaultProps = {
     isCheckable: false,
+    isEditable: false,
     tableData: {
       thLabels: []
     },
@@ -97,28 +106,43 @@ export class SortableTable extends Component {
       clearSearch,
       selectAll,
       selectAllState,
+      editAllState,
       selectEverything,
       updateSelected,
       isCheckable,
       multiActions,
       primaryKey,
-      selectedItems
+      selectedItems,
+      updateEditingItems,
+      updateEditedItems,
+      saveAllItems,
+      saveEditedItem,
+      toggleEditAll,
     } = this.props;
 
-    // console.log(this.props);
+    if (typeof tableData === 'undefined' && typeof sortedItems === 'undefined') {
+    	console.error('tableData & sortedItems are undefined')
+    	return null;
+    }
 
-    if (typeof tableData === 'undefined' && typeof sortedItems === 'undefined') return null;
+	  const isEditable = typeof tableData.thLabels !== 'undefined' ? tableData.thLabels.some(item => item.editable) : false;
+  	if (typeof tableData.thLabels !== 'undefined') {
+	    tableData.thLabels = tableData.thLabels.map(item => {
+	    	item.editable = typeof item.editable === 'boolean' ? item.editable : false;
+	    	return item;
+	    });
+  	}
+
 
     const rowStripe = index => {
       return index % 2 === 0 ? ' bg-gray-100' : '';
     }
 
     const selectedItemsLength = typeof selectedItems !== 'undefined' ? selectedItems.length : 0;
-    
 
     // if some of the thLabels are searchable return true (used for selectAllCol)
     const hasSearch = typeof tableData.thLabels !== 'undefined' ? tableData.thLabels.some(item => item.searchable) : false;
-    
+
     const selectAllCol = (
       <td width="50">
 				<div className="text-center">
@@ -136,22 +160,57 @@ export class SortableTable extends Component {
       <div className="mx-auto">
 		  	<div className="bg-white shadow-md rounded my-6">
 			  	<div>
-			  	{isCheckable &&
-	            <div className="flex pb-3 justify-end">
+			  		{(isCheckable || isEditable) &&
+            <div className="flex pb-3 justify-end">
+		  				{isCheckable &&
+		  				<React.Fragment>
+	            	<div className="flex flex-wrap w-1/2 items-center">
+	              	<span data-test="selected-items-length">{selectedItemsLength} selected</span>
+	              </div>
+              </React.Fragment>
+          		}
+          		<div className="w-1/2 text-right flex justify-end">
 	              {typeof multiActions !== 'undefined' && multiActions.length > 0 &&
-	              	<div className="w-1/2 text-left" data-test="multi-actions">
+		              <span className="mr-2">
 		                <DropdownButton 
 		                  actions={multiActions}
 		                  callbackProps={{ ...this.props, ...this.state }}
 		                  disabled={selectedItemsLength === 0}
+		                  data-test="multi-actions"
 		                />
-	              	</div>
+				          </span>
 	              }
-	              <div className="flex flex-wrap w-1/2 justify-end items-center">
-	              	<span data-test="selected-items-length">{selectedItemsLength} selected</span>
-	              </div>
-	            </div>
-	          }
+	              {isEditable &&
+	              	<React.Fragment>
+			              {!editAllState ? (
+			              	<Button 
+			                  style="primary"
+			                  onClick={toggleEditAll}
+			                  data-test="edit-all-btn">Edit All</Button>
+			              ) : (
+			              	<React.Fragment>
+					              <Button
+					              	classes="mr-2"
+							            style="primary"
+							            onClick={saveAllItems}
+							            data-test="save-all-btn"
+							           >
+							            Save All
+							          </Button>
+							          <Button 
+				                  style="primary"
+				                  onClick={toggleEditAll}
+							            data-test="cancel-all-btn"
+				                >
+				                	Cancel
+				                </Button>
+			                </React.Fragment>
+			              )}
+		              </React.Fragment>
+	              }
+            	</div>
+            </div>
+			  		}
 			  	</div>
 		      <table className="text-left w-full border-collapse table-auto">
 						<thead>
@@ -171,6 +230,9 @@ export class SortableTable extends Component {
 						          </button>
 						        </td>
 						    ))}
+						    {isEditable &&
+					    		<td>&nbsp;</td>
+					    	}
 				    	</tr>
 				    	{hasSearch &&
 					    	<tr>
@@ -191,16 +253,16 @@ export class SortableTable extends Component {
 				                    data-test="search-field"
 				                  />
 				                  <button
-				                  		className="inline-block absolute top-0 right-0 py-3 px-4"
-				                      onClick={() => clearSearch(label.value)}
-				                    >
-				                    <span className="h-4 w-4 inline-block flex">
-				                   		<CrossIcon />
-				                   	</span>
-			                    </button>
-			                  </div>
-			              	}
-			              </td>
+			                  		className="inline-block absolute top-0 right-0 py-3 px-4"
+			                      onClick={() => clearSearch(label.value)}
+			                    >
+			                    <span className="h-4 w-4 inline-block flex">
+			                   		<CrossIcon />
+			                   	</span>
+		                    </button>
+		                  </div>
+		              	}
+		              </td>
 			          ))}
 			          </tr>
 				    	}
@@ -229,13 +291,63 @@ export class SortableTable extends Component {
 	                  </td>
 	                }
 		              {!isEmpty(tableData.thLabels) && tableData.thLabels.map((col, i) => (
-		                <td 
-		                	key={i}
-		                	className={tdClass}
-		                >
-		                		{item[col.value]}
-		                </td>
+		              	<React.Fragment key={i}>
+		              		{/*'' + col.editable*/}
+			                {(!item.isEditing || !col.editable) && 
+				                <td className={tdClass} >
+		                			{item[col.value]}
+			                	</td>
+			                }
+			                {(item.isEditing && col.editable) &&
+			                	<td key={i} className={tdClassEditing}>
+				                	<input 
+			                      type="text"
+			                      className={editInputClass}
+			                      placeholder={item[col.value]}
+			                      onChange={(e) => updateEditedItems(e, item, col.value)}
+			                      data-test="edit-col-input"
+			                     />
+			                  </td>
+			                }
+		                </React.Fragment>       
 		              ))}
+		              {isEditable &&
+                    <td className="text-center" width="150">
+                      {item.isEditing ? (
+                        <div>
+                          <Button 
+                            size="small"
+                            display="inline-block"
+                            onClick={saveEditedItem}
+                            value={item[primaryKey]}
+                          	data-test="save-edit-row-btn"
+                           >
+                              Save
+                          </Button>
+                           &nbsp;
+                          <Button 
+                            size="small" 
+                            display="inline-block"
+                            onClick={updateEditingItems}
+                          	value={item[primaryKey]}
+                          	data-test="cancel-edit-row-btn"
+                           >
+                              Cancel
+                          </Button>
+                        </div>
+                      ) : (
+                        <Button 
+                          size="small" 
+                          display="inline-block"
+                          onClick={updateEditingItems}
+                          value={item[primaryKey]}
+                          data-test="edit-row-btn"
+                         >
+                            Edit
+                        </Button>
+                      )}
+                    </td>
+                  }
 		            </tr>
 		          ))
 		        }
